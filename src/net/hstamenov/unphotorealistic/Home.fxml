@@ -7,8 +7,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.hstamenov.unphotorealistic.HomeController">
+<BorderPane id="AnchorPane" fx:id="root" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.hstamenov.unphotorealistic.HomeController">
     <stylesheets>
         <URL value="@home.css"/>
     </stylesheets>
-</AnchorPane>
+    <top>
+        <MenuBar id="menuBar" focusTraversable="true" >  
+            <menus>  
+                <Menu text="File">  
+                    <items>  
+                        <MenuItem text="Open" onAction="#openFile" />
+                        <MenuItem text="Exit" />  
+                    </items>
+                </Menu>  
+                <Menu text="Image">  
+                    <items>  
+                        <MenuItem text="Text Example"/>  
+                        <MenuItem text="Objects Example"/>  
+                        <MenuItem text="Animation Example"/>  
+                    </items>  
+                </Menu>
+            </menus>  
+        </MenuBar> 
+    </top>
+</BorderPane>
