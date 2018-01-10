@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package net.hstamenov.unphotorealistic;
+package net.hstamenov.nonphotorealistic;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -26,12 +26,12 @@ public class Home extends Application {
     public void start(Stage primaryStage) throws IOException {
         
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
-        Scene scene = new Scene(root, 300, 275);
+        Scene scene = new Scene(root, 640, 480);
         
         primaryStage.setTitle("Text screening");
         primaryStage.setScene(scene);
-        primaryStage.setMinHeight(480);
         primaryStage.setMinWidth(640);
+        primaryStage.setMinHeight(480);
         primaryStage.show();
     }
 
