@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane id="AnchorPane" fx:id="root" prefHeight="480.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/9.0.1" fx:controller="net.hstamenov.unphotorealistic.HomeController">
+<BorderPane id="AnchorPane" fx:id="root" prefHeight="480.0" prefWidth="640.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.hstamenov.nonphotorealistic.HomeController">
     <stylesheets>
         <URL value="@home.css" />
     </stylesheets>
