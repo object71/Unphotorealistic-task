@@ -4,6 +4,7 @@
 <?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -30,4 +31,5 @@
             </menus>  
         </MenuBar> 
     </top>
+    <ImageView fx:id="imageView" disable="false" pickOnBounds="true" preserveRatio="true" />
 </BorderPane>

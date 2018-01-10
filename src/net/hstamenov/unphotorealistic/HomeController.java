@@ -5,14 +5,19 @@
  */
 package net.hstamenov.unphotorealistic;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
+import javax.imageio.ImageIO;
 
 /**
  * FXML Controller class
@@ -22,6 +27,10 @@ import javafx.stage.FileChooser;
 public class HomeController implements Initializable {
     @FXML
     private BorderPane root;
+    @FXML
+    private ImageView imageView;
+    
+    private BufferedImage originalImage = null;
     /**
      * Initializes the controller class.
      */
@@ -34,6 +43,12 @@ public class HomeController implements Initializable {
         FileChooser fileChooser = new FileChooser();
         //FileChooser.ExtensionFilter extensionFilter = new FileChooser.ExtensionFilter("Images", "*.png");
         File file = fileChooser.showOpenDialog(root.getScene().getWindow());
-        System.out.println(file.getAbsolutePath());
+        try {
+            originalImage = ImageIO.read(file);
+        }
+        catch(IOException ex) {
+            ex.printStackTrace();
+        }
+        imageView.setImage(SwingFXUtils.toFXImage(originalImage, null));
     }
 }
