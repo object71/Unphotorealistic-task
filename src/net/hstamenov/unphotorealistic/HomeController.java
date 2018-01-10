@@ -14,6 +14,8 @@ import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Slider;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.FileChooser;
@@ -29,8 +31,15 @@ public class HomeController implements Initializable {
     private BorderPane root;
     @FXML
     private ImageView imageView;
+    @FXML
+    private TextField selectedText;
+    @FXML
+    private Slider fontSize;
+    @FXML
+    private Slider matrixSize;
     
     private BufferedImage originalImage = null;
+    
     /**
      * Initializes the controller class.
      */
@@ -50,5 +59,9 @@ public class HomeController implements Initializable {
             ex.printStackTrace();
         }
         imageView.setImage(SwingFXUtils.toFXImage(originalImage, null));
+    }
+    
+    public void generateImage() {
+        
     }
 }
