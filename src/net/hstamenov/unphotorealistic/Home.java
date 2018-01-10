@@ -28,8 +28,10 @@ public class Home extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene scene = new Scene(root, 300, 275);
         
-        primaryStage.setTitle("Unphotorealistic application");
+        primaryStage.setTitle("Text screening");
         primaryStage.setScene(scene);
+        primaryStage.setMinHeight(480);
+        primaryStage.setMinWidth(640);
         primaryStage.show();
     }
 
